@@ -11,9 +11,6 @@
     <title>EyeHealth</title>
 
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
         body {
             margin: 0;
             background-color: black;
@@ -84,6 +81,19 @@
             background-color: #0d0d0d;
             border: 1px solid #242424;
             border-radius: 16px;
+        }
+        .feature h3 {
+            color: #1ADEDE;
+            font-weight: 500;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gab: 20px;
+            margin-top: 40px;
+        }
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
