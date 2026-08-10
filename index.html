@@ -47,9 +47,15 @@
                 color: #bdbdbd;
                 font-size: 20px;
             }
+            .hero-buttons {
+                display: flex;
+                flex-directon: column;
+                align-items: center;
+                gap: 12px;
+                margin-top: 24px;
+            }
             .button {
                 display: inline-block;
-                margin-top: 24px;
                 font-weight: 600;
                 background-color: #1ADEDE;
                 color: black;
@@ -172,13 +178,15 @@
             <div class="hero">
                 <h1>EyeHealth</h1>
                 <p>Take care of your eyes during screen use.</p>
-                
-                <a class="button" href=#about>
-                    About EyeHealth
-                </a>
-                <a class="button" href=#privacy>
-                    Privacy policy
-                </a>
+
+                <div class="hero-buttons">
+                    <a class="button" href=#about>
+                        About EyeHealth
+                    </a>
+                    <a class="button" href=#privacy>
+                        Privacy policy
+                    </a>
+                </div>
             </div>
         </header>
     
