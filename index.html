@@ -202,6 +202,12 @@
     </head>
         
     <body>
+        <div class="language-selector">
+            <select id="languageSelect">
+                <option value="">Language</option>
+                <option value="en">English</option>
+                <option value="pt-br">Português</option>
+        </div>
         <header>
             <div class="hero">
                 <h1>EyeHealth</h1>
@@ -465,5 +471,16 @@
                 <p>@ 2026 EyeHealth</p>
             </div>
         </footer>
+
+        <script>
+            document.getElementById("languageSelect").addEventListener("change", function () {
+                if (this.value == "en") {
+                    window.location.href = "./";
+                }
+                if (this.value == "pt-br") {
+                    window.location.href = "pt.br/";
+                }
+            });
+        </script>
     </body>
 </html>
