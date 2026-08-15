@@ -19,6 +19,11 @@
             href="https://samuel-silva1.github.io/eyehealth-website/pt-br/"/>
 
         <link 
+        rel="alternate"
+        hreflang="es"
+        href="https://samuel-silva1.github.io/eyehealth-website/es/"/>
+
+        <link 
             rel="alternate"
             hreflang="x-default"
             href="https://samuel-silva1.github.io/eyehealth-website/"/>
@@ -240,6 +245,7 @@
             <select id="languageSelect">
                 <option value="en">English</option>
                 <option value="pt-br" selected>Português</option>
+                <option value="es">Español</option>
             </select>
         </div>
         
@@ -519,8 +525,11 @@
                             if (this.value === "en") {
                                 window.location.href = "../";
                             }
-                            if (this.value === "pt-br") {
+                            else if (this.value === "pt-br") {
                                 window.location.href = "./";
+                            }
+                            else if (this.value === "es") {
+                                window.location.href = "../es/";
                             }
                         });
                     </script>
