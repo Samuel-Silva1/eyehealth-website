@@ -235,272 +235,334 @@
             }
         </style>
     </head>
-        
-    <body>
-        <div class="language-selector">
-            <select id="languageSelect">
-                <option value="en">English</option>
-                <option value="pt-br">Português</option>
-                <option value="es" selected>Español</option>
-            </select>
-        </div>
-        <header>
-            <div class="hero">
-                <h1>EyeHealth</h1>
-                <p>Take care of your eyes during screen use.</p>
 
-                <div class="hero-buttons">
-                    <a class="button" href=#about>
-                        About EyeHealth
-                    </a>
-                    <a class="button" href=#privacy>
-                        Privacy policy
-                    </a>
+<body>
+    <div class="language-selector">
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="pt-br">Português</option>
+            <option value="es" selected>Español</option>
+        </select>
+    </div>
+
+    <header>
+        <div class="hero">
+            <h1>EyeHealth</h1>
+            <p>Cuida tus ojos durante el uso de pantallas.</p>
+
+            <div class="hero-buttons">
+                <a class="button" href="#about">
+                    Acerca de EyeHealth
+                </a>
+
+                <a class="button" href="#privacy">
+                    Política de Privacidad
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>Acerca de EyeHealth</h2>
+
+                <p>
+                    EyeHealth te ayuda a hacer pausas regulares durante el uso
+                    prolongado de pantallas, facilitando el seguimiento de la regla 20-20-20.
+                </p>
+
+                <div class="features">
+
+                    <div class="feature">
+                        <h3>Regla 20-20-20</h3>
+                        <p>
+                            Recibe recordatorios periódicos para apartar la vista
+                            de la pantalla y descansar los ojos.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Personalizable</h3>
+                        <p>
+                            Ajusta la duración del temporizador, los sonidos, la vibración
+                            y las notificaciones según tus preferencias.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Varios idiomas</h3>
+                        <p>
+                            Usa EyeHealth en el idioma que prefieras.
+                        </p>
+                    </div>
+
                 </div>
             </div>
-        </header>
-    
-        <main>
-            <section id="about">
-                <div class="container">
-                   <h2>About EyeHealth</h2>
-                    <p>
-                        EyeHealth helps you take regular breaks during prolonged
-                        screen use by making the 20-20-20 rule easier to follow.
-                    </p>
-                    <div class="features">
-                        
-                        <div class="feature">
-                            <h3>20-20-20 Rule</h3>
-                            <p>
-                                Get regular reminders to take a break from the
-                                screen and rest your eyes.
-                            </p>
-                        </div>
-                        <div class="feature">
-                            <h3>Customizable</h3>
-                            <p>
-                                Adjust timer durations, sounds, vibration and notifications
-                                according to your preferences.
-                            </p>
-                        </div>
-                        <div class="feature">
-                            <h3>Multiple languages</h3>
-                            <p>Use EyeHealth in the language that best suits you.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="privacy">
-                <div class="container privacy">
-                    <h2>Privacy Policy</h2>
-                    <p class="last-updated">
-                        <strong>Last updated:</strong> August 13, 2026   
-                    </p>
-                    <p>
-                        EyeHealth is developed by Samuel Silva. 
-                        This Privacy policy explains how EyeHealth handles 
-                        information when you use this application.
-                    </p>
+        </section>
 
-                    <h3>1. Information we collect</h3>
-                    <p>EyeHealth does not collect personal or sensitive user data.</p>
-                    <p>
-                        The application does not require users to create an account or
-                        provide personal information such as a name, email address, phone
-                        number, location, contacts, photos, microphone recordings, or other
-                        personally identifiable information.
-                    </p>
-                    <p>
-                        The current version of EyeHealth does not use analytics,
-                        advertising, crash-reporting, tracking, or cloud-service SDKs,
-                        and does not transmit user data to servers operated by the developer.
-                    </p>
+        <section id="privacy">
+            <div class="container privacy">
 
-                    <h3>2. Information stored locally</h3>
-                    <p>
-                        EyeHealth stores certain information locally on your device
-                        in order to provide its functionality and remember your preferences.
-                    </p>
+                <h2>Política de Privacidad</h2>
 
-                    <ul>
-                        <li>Screen-time and break-time durations;</li>
-                        <li>Current timer state and remaining time;</li>
-                        <li>Selected language;</li>
-                        <li>Sound preferences and selected notification sound;</li>
-                        <li>Vibration preferences;</li>
-                        <li>Notification preferences;</li>
-                        <li>Application setup and welcome-screen preferences.</li>
-                    </ul>
-                    <p>
-                        This information is used only for the operation and configuration
-                        of the application.
-                    </p>
-                    <p>EyeHealth does not transmit this locally stored information to the developer.</p>
+                <p class="last-updated">
+                    <strong>Última actualización:</strong> 13 de agosto de 2026
+                </p>
 
-                    <h3>3. App permissions</h3>
-                    <p>EyeHealth may request or use the following Android permissions.</p>
-                    <ul>
-                        <li>
-                            <strong>Notifications:</strong>
-                            Used to display timer notifications and alert you when
-                            a screen-time or a break period has ended.
-                        </li>
-                        <li>
-                            <strong>Exact alarms:</strong>
-                            Used to ensure that timer phases end at the correct time, including
-                            when the device is idle or the app is not actively open.
-                        </li>
-                        <li>
-                            <strong>Wake lock:</strong>
-                            Used briefly during short break periods to keep the timer processing
-                            active while the screen is off.
-                        </li>
-                        <li>
-                            <strong>Vibration:</strong>
-                            Used to provide optional vibration alerts.
-                        </li>
-                        <li>
-                            <strong>Foreground Service:</strong>
-                            Used to keep an active EyeHealth timer running when
-                            the application is not currently visible on the screen.
-                        </li>
-                    </ul>
-                    <p>
-                        These permissions are used only to provide the
-                        corresponding application features.
-                    </p>
-                    <p>
-                        EyeHealth does not request access to your location, camera,
-                        microphone, contacts, photos or other personal content.
-                    </p>
-                    
-                    <h3>4. Internet Access</h3>
-                    <p>
-                        The current version of EyeHealth does not request the Android
-                        internet permission and does not use an Internet connection to
-                        transmit application or user data.
-                    </p>
-                    <p>
-                        Sounds and voice prompts included with EyeHealth are stored within
-                        the application and are played locally on the device. No audio is
-                        recorded from the user or sent to an external service.
-                    </p>
-                    <p>
-                        Android backup or device-transfer services may independently handle
-                        locally stored application data as described in the section below.
-                    </p>
-                    
-                    <h3>5. Android Backup and Device Transfer</h3>
-                    <p>
-                        EyeHealth stores its settings and timer information locally on
-                        your device.
-                    </p>
-                    <p>
-                        Depending on your Android device, account, and backup settings,
-                        some locally stored application data may be included in backup
-                        or device-transfer mechanisms provided by the Android operating
-                        system or the user's backup provider.
-                    </p>
-                    <p>
-                        These backup and restoration processes are managed by the
-                        operating system or backup provider and are not operated or
-                        accessed by the EyeHealth developer.
-                    </p>
+                <p>
+                    EyeHealth es desarrollado por Samuel Silva.
+                    Esta Política de Privacidad explica cómo EyeHealth gestiona
+                    la información cuando utilizas esta aplicación.
+                </p>
 
-                    <h3>6. Sharing of information</h3>
-                    <p>
-                        EyeHealth does not sell, rent, or share personal or sensitive
-                        user data with third parties.
-                    </p>
-                    <p>
-                        Because the current version of EyeHealth does not collect personal
-                        or sensitive user data, the developer does not maintain a database
-                        of user information.
-                    </p>
+                <h3>1. Información que recopilamos</h3>
 
-                    <h3>7. Data Security</h3>
-                    <p>
-                        EyeHealth is designed to minimize data handling by keeping
-                        application settings and timer information locally on the 
-                        user's device.
-                    </p>
-                    <p>
-                        The current version does not transmit personal or sensitive
-                        user data to developer-operated servers.
-                    </p>
-                    <p>
-                        Locally stored application data is subject to the security
-                        mechanisms provided by the Android operating system and the
-                        user's device.
-                    </p>
+                <p>
+                    EyeHealth no recopila datos personales ni datos sensibles de los usuarios.
+                </p>
 
-                    <h3>8. Data Retention and Deletion</h3>
-                    <p>
-                        EyeHealth retains locally stored settings and timer information
-                        for as long as they remain stored by the application on the
-                        user's device.
-                    </p>
-                    <p>
-                        Users can remove locally stored EyeHealth data by clearing the
-                        application's storage through Android settings or by uninstalling
-                        the application.
-                    </p>
-                    <p>
-                        Data that may have been included in an Android or account-based
-                        backup is subject to the retention and deletion controls of the
-                        relevant operating system or backup provider.
-                    </p>
-                    <p>
-                        EyeHealth does not maintain user accounts or developer-operated
-                        user databases, so there is no separate account or server-side
-                        user data to delete.
-                    </p>
+                <p>
+                    La aplicación no requiere que los usuarios creen una cuenta ni
+                    proporcionen información personal como nombre, dirección de correo
+                    electrónico, número de teléfono, ubicación, contactos, fotos,
+                    grabaciones del micrófono u otra información de identificación personal.
+                </p>
 
-                    <h3>9. Third-Party Services</h3>
-                    <p>
-                        The current version of EyeHealth does not integrate third-party
-                        advertising, analytics, user-tracking, or account-management
-                        services.
-                    </p>
-                    <p>
-                        The application uses standard Android and AndroidX libraries to
-                        provide application functionality.
-                    </p>
-                    <p>
-                        System-level services such as Android backup, application
-                        permissions, and notifications are provided and managed by the
-                        Android operating system.
-                    </p>
+                <p>
+                    La versión actual de EyeHealth no utiliza SDK de análisis,
+                    publicidad, informes de fallos, seguimiento ni servicios en la nube,
+                    y no transmite datos de los usuarios a servidores operados por el desarrollador.
+                </p>
 
-                    <h3>10. Changes to this Privacy Policy</h3>
-                    <p>
-                        This Privacy Policy may be updated if EyeHealth's functionality
-                        or data-handling practices change.
-                    </p>
-                    <p>
-                        Any changes will be reflected on this page, and the
-                        "Last updated" date will be revised accordingly.
-                    </p>
-                    <p>
-                        Users are encouraged to review this Privacy Policy periodically.
-                    </p>
+                <h3>2. Información almacenada localmente</h3>
 
-                    <h3>11. Contact</h3>
-                    <p>
-                        If you have any questions about this Privacy Policy or EyeHealth's
-                        privacy practices, you can contact the developer at:
-                    </p>
-                    <p class="contact-email">
-                        <a href="mailto:samuel.silva.appz@gmail.com">
-                            samuel.silva.appz@gmail.com
-                        </a>
-                    </p>
-                </div>
-                
-            </section>
-        </main>
+                <p>
+                    EyeHealth almacena determinada información localmente en tu dispositivo
+                    para proporcionar sus funciones y recordar tus preferencias.
+                </p>
+
+                <ul>
+                    <li>Duración del tiempo de pantalla y de las pausas;</li>
+                    <li>Estado actual del temporizador y tiempo restante;</li>
+                    <li>Idioma seleccionado;</li>
+                    <li>Preferencias de sonido y sonido de notificación seleccionado;</li>
+                    <li>Preferencias de vibración;</li>
+                    <li>Preferencias de notificaciones;</li>
+                    <li>Preferencias de configuración inicial y de la pantalla de bienvenida.</li>
+                </ul>
+
+                <p>
+                    Esta información se utiliza únicamente para el funcionamiento
+                    y la configuración de la aplicación.
+                </p>
+
+                <p>
+                    EyeHealth no transmite al desarrollador esta información
+                    almacenada localmente.
+                </p>
+
+                <h3>3. Permisos de la aplicación</h3>
+
+                <p>
+                    EyeHealth puede solicitar o utilizar los siguientes permisos de Android.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Notificaciones:</strong>
+                        Se utilizan para mostrar notificaciones del temporizador y avisarte
+                        cuando ha finalizado un período de tiempo de pantalla o de pausa.
+                    </li>
+
+                    <li>
+                        <strong>Alarmas exactas:</strong>
+                        Se utilizan para garantizar que las fases del temporizador terminen
+                        en el momento correcto, incluso cuando el dispositivo está inactivo
+                        o la aplicación no está abierta activamente.
+                    </li>
+
+                    <li>
+                        <strong>Wake lock:</strong>
+                        Se utiliza brevemente durante los períodos cortos de pausa para
+                        mantener activo el procesamiento del temporizador mientras la
+                        pantalla está apagada.
+                    </li>
+
+                    <li>
+                        <strong>Vibración:</strong>
+                        Se utiliza para proporcionar alertas de vibración opcionales.
+                    </li>
+
+                    <li>
+                        <strong>Servicio en primer plano:</strong>
+                        Se utiliza para mantener un temporizador activo de EyeHealth
+                        en funcionamiento cuando la aplicación no está visible en la pantalla.
+                    </li>
+                </ul>
+
+                <p>
+                    Estos permisos se utilizan únicamente para proporcionar
+                    las funciones correspondientes de la aplicación.
+                </p>
+
+                <p>
+                    EyeHealth no solicita acceso a tu ubicación, cámara,
+                    micrófono, contactos, fotos ni otros contenidos personales.
+                </p>
+
+                <h3>4. Acceso a Internet</h3>
+
+                <p>
+                    La versión actual de EyeHealth no solicita el permiso de Internet
+                    de Android y no utiliza una conexión a Internet para transmitir
+                    datos de la aplicación o del usuario.
+                </p>
+
+                <p>
+                    Los sonidos y avisos de voz incluidos con EyeHealth se almacenan
+                    dentro de la aplicación y se reproducen localmente en el dispositivo.
+                    No se graba ningún audio del usuario ni se envía a un servicio externo.
+                </p>
+
+                <p>
+                    Los servicios de copia de seguridad o transferencia de dispositivos
+                    de Android pueden gestionar de forma independiente los datos de la
+                    aplicación almacenados localmente, tal como se describe en la sección siguiente.
+                </p>
+
+                <h3>5. Copia de seguridad de Android y transferencia de dispositivos</h3>
+
+                <p>
+                    EyeHealth almacena sus ajustes y la información del temporizador
+                    localmente en tu dispositivo.
+                </p>
+
+                <p>
+                    Dependiendo de tu dispositivo Android, cuenta y configuración de
+                    copia de seguridad, algunos datos de la aplicación almacenados
+                    localmente pueden incluirse en mecanismos de copia de seguridad
+                    o transferencia de dispositivos proporcionados por el sistema
+                    operativo Android o por el proveedor de copias de seguridad del usuario.
+                </p>
+
+                <p>
+                    Estos procesos de copia de seguridad y restauración son gestionados
+                    por el sistema operativo o por el proveedor de copias de seguridad
+                    y no son operados ni accedidos por el desarrollador de EyeHealth.
+                </p>
+
+                <h3>6. Compartición de información</h3>
+
+                <p>
+                    EyeHealth no vende, alquila ni comparte datos personales o sensibles
+                    de los usuarios con terceros.
+                </p>
+
+                <p>
+                    Debido a que la versión actual de EyeHealth no recopila datos personales
+                    o sensibles de los usuarios, el desarrollador no mantiene una base de
+                    datos con información de los usuarios.
+                </p>
+
+                <h3>7. Seguridad de los datos</h3>
+
+                <p>
+                    EyeHealth está diseñado para minimizar el tratamiento de datos,
+                    manteniendo la configuración de la aplicación y la información del
+                    temporizador localmente en el dispositivo del usuario.
+                </p>
+
+                <p>
+                    La versión actual no transmite datos personales o sensibles de los
+                    usuarios a servidores operados por el desarrollador.
+                </p>
+
+                <p>
+                    Los datos de la aplicación almacenados localmente están sujetos a
+                    los mecanismos de seguridad proporcionados por el sistema operativo
+                    Android y por el dispositivo del usuario.
+                </p>
+
+                <h3>8. Conservación y eliminación de datos</h3>
+
+                <p>
+                    EyeHealth conserva la configuración y la información del temporizador
+                    almacenadas localmente mientras permanezcan guardadas por la aplicación
+                    en el dispositivo del usuario.
+                </p>
+
+                <p>
+                    Los usuarios pueden eliminar los datos de EyeHealth almacenados localmente
+                    borrando el almacenamiento de la aplicación desde los ajustes de Android
+                    o desinstalando la aplicación.
+                </p>
+
+                <p>
+                    Los datos que puedan haber sido incluidos en una copia de seguridad
+                    de Android o vinculada a una cuenta están sujetos a los controles de
+                    conservación y eliminación del sistema operativo o proveedor de copias
+                    de seguridad correspondiente.
+                </p>
+
+                <p>
+                    EyeHealth no mantiene cuentas de usuario ni bases de datos de usuarios
+                    operadas por el desarrollador, por lo que no existen datos separados
+                    de cuentas o datos almacenados en servidores del desarrollador que deban eliminarse.
+                </p>
+
+                <h3>9. Servicios de terceros</h3>
+
+                <p>
+                    La versión actual de EyeHealth no integra servicios de terceros de
+                    publicidad, análisis, seguimiento de usuarios ni gestión de cuentas.
+                </p>
+
+                <p>
+                    La aplicación utiliza bibliotecas estándar de Android y AndroidX
+                    para proporcionar sus funciones.
+                </p>
+
+                <p>
+                    Los servicios a nivel del sistema, como las copias de seguridad de
+                    Android, los permisos de la aplicación y las notificaciones, son
+                    proporcionados y gestionados por el sistema operativo Android.
+                </p>
+
+                <h3>10. Cambios en esta Política de Privacidad</h3>
+
+                <p>
+                    Esta Política de Privacidad puede actualizarse si cambian las
+                    funciones de EyeHealth o sus prácticas de tratamiento de datos.
+                </p>
+
+                <p>
+                    Cualquier cambio se reflejará en esta página y la fecha de
+                    "Última actualización" se modificará según corresponda.
+                </p>
+
+                <p>
+                    Se recomienda a los usuarios revisar periódicamente esta
+                    Política de Privacidad.
+                </p>
+
+                <h3>11. Contacto</h3>
+
+                <p>
+                    Si tienes alguna pregunta sobre esta Política de Privacidad
+                    o sobre las prácticas de privacidad de EyeHealth, puedes
+                    contactar con el desarrollador en:
+                </p>
+
+                <p class="contact-email">
+                    <a href="mailto:samuel.silva.appz@gmail.com">
+                        samuel.silva.appz@gmail.com
+                    </a>
+                </p>
+
+            </div>
+        </section>
+    </main>
 
         <footer>
             <div class="container">
