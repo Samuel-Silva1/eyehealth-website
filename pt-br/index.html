@@ -34,13 +34,26 @@
             }
 
             .language-selector select {
+                appearance: none;
+                -webkit-appearance: none;
                 background-color: black;
                 color: white;
                 border: 1px solid #1ADEDE;
                 border-radius: 8px;
                 padding: 8px 28px 8px 12px;
-                font-size: 14px;
+                font-size: 16px;
                 cursor: pointer;
+            }
+
+            .language-selector:: after{
+                content: "▾";
+                position: absolute;
+                right: 11px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: white;
+                font-size: 16px;
+                pointer-events: none;
             }
 
             .language-selector select:focus {
