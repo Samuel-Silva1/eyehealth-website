@@ -511,13 +511,13 @@
         <script>
             document.getElementById("languageSelect").addEventListener("change", function () {
                 if (this.value === "en") {
-                    window.location.href = "./";
+                    window.location.href = "../";
+                } 
+                else if (this.value === "pt-br") {
+                    window.location.href = "../pt-br/";
                 }
-                if (this.value === "pt-br") {
-                    window.location.href = "pt-br/";
-                }
-              if (this.value === "es") {
-                window.location.href = "es/"
+                else if (this.value === "es") {
+                window.location.href = "./"
               }
             });
         </script>
