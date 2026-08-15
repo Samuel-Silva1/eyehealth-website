@@ -1,1 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+    
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+    
+        <title>EyeHealth</title>
 
+        <link
+            rel="alternate"
+            hreflang="en"
+            href="https://samuel-silva1.github.io/eyehealth-website/"/>
+
+        <link
+            rel="alternate"
+            hreflang="pt-BR"
+            href="https://samuel-silva1.github.io/eyehealth-website/pt-br/"/>
+
+      <link 
+          rel="alternate"
+          hreflang="es"
+          href="https://samuel-silva1.github.io/eyehealth-website/es/"/>
+
+      <link 
+          rel="alternate"
+          hreflang="ja"
+          href="https://samuel-silva1.github.io/eyehealth-website/ja/"/>
+      
+
+    <link 
+        rel="alternate"
+        hreflang="fr"
+        href="https://samuel-silva1.github.io/eyehealth-website/fr/"/>
+
+        <link 
+            rel="alternate"
+            hreflang="x-default"
+            href="https://samuel-silva1.github.io/eyehealth-website/"/>
+
+        <style>
+            .language-selector {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 10;
+            }
+
+            .language-selector select {
+                appearance: none;
+                -webkit-appearance: none;
+                background-color: black;
+                color: white;
+                border: 1px solid #1ADEDE;
+                border-radius: 8px;
+                padding: 8px 28px 8px 12px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .language-selector::after {
+                content: "▾";
+                position: absolute;
+                right: 11px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: white;
+                font-size: 16px;
+                pointer-events: none;
+            }
+            
+            body {
+                margin: 0;
+                background-color: black;
+                color: white;
+                font-family: Arial, sans-serif;
+            }
+            header {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            header p {
+                margin-bottom: 40px;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            footer {
+                padding: 40px 0;
+                border-top: 1px solid #242424;
+                color: #777777;
+                text-align: center;
+            }
+            .hero {
+                text-align: center;
+                max-width: 700px;
+                padding: 20px;
+            }
+            .hero h1 {
+                color: #1ADEDE;
+                font-size: clamp(3rem, 10vw, 5.5rem);
+                font-weight: 300;
+            }
+            .hero p {
+                color: #bdbdbd;
+                font-size: 20px;
+            }
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                margin-top: 24px;
+            }
+            .a {
+                width: 200px;
+            }
+            .button {
+                display: inline-block;
+                text-align: center;
+                font-weight: 600;
+                width: 130px;
+                background-color: #1ADEDE;
+                color: black;
+                padding: 12px 24px;
+                text-decoration: none;
+                border-radius: 999px;
+                transition:
+                    opacity 0.2s ease,
+                    transform 0.2s ease;
+            }
+            .button:hover {
+                opacity: 0.8;
+                transform: translateY(-2px);
+            }
+            .container {
+                width: 90%;
+                max-width: 900px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .privacy {
+                max-width: 600px;
+                line-height: 1.8;
+            }
+            .privacy p {
+                color: #bdbdbd;
+                line-height: 1.8;;
+            }
+            .privacy h2 {
+                text-align: center;
+            }
+            .privacy h3 {
+                margin-top: 48px;
+                margim-bottom: 20px;
+                color: white;
+                fontWeight: 500;
+                text-align: center;
+            }
+            .privacy ul {
+                color: #bdbdbd;
+                padding-left: 24px;
+                line-height: 1.8;
+            }
+            .privacy li {
+                margin-bottom: 8px;
+            }
+            .privacy a {
+                color: #1ADEDE;
+                transition: opacity 0.2s ease;
+            }
+            .privacy a:hover {
+                opacity: 0.8;
+            }
+            section {
+                padding: 80px 0;
+            }
+            section h2 {
+                color: #1ADEDE;
+                font-size: clamp(1.7rem, 4vw, 2rem);
+                font-weight: 400;
+            }
+            #about {
+                text-align: center;
+                margin-bottom: 70vh;
+            }
+            .about p {
+                color: #bdbdbd;
+                font-size: 17px;
+                line-height: 1.6;
+            }
+            .about h2 {
+                text-align: center;
+            }
+            .feature {
+                padding: 24px;
+                background-color: #0d0d0d;
+                border: 1px solid #242424;
+                border-radius: 16px;
+            }
+            .feature h3 {
+                margin-top: 0;
+                color: white;
+                font-weight: 500;
+            }
+            .feature p {
+                font-size: 15px;
+                margin-bottom: 0;
+            }
+            .features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 20px;
+                margin-top: 40px;
+            }
+            @media (max-width: 600px) {
+                header {
+                    min-height: 85vh;
+                }
+                section {
+                    padding: 60px 0;
+                }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                html {
+                    scroll-behavior: auto;
+                }
+                .button {
+                    transition: none;
+                }
+                .button:hover {
+                    transform: none;
+                }
+            }
+            .last-updated {
+                text-align: center;
+            }
+            .contact-email {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="language-selector">
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="pt-br">Português</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="ja" selected>日本語</option>
+        </select>
+    </div>
+
+    <header>
+        <div class="hero">
+            <h1>EyeHealth</h1>
+            <p>Cuida tus ojos durante el uso de pantallas.</p>
+
+            <div class="hero-buttons">
+                <a class="button" href="#about">
+                    Acerca de EyeHealth
+                </a>
+
+                <a class="button" href="#privacy">
+                    Política de Privacidad
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>Acerca de EyeHealth</h2>
+
+                <p>
+                    EyeHealth te ayuda a hacer pausas regulares durante el uso
+                    prolongado de pantallas, facilitando el seguimiento de la regla 20-20-20.
+                </p>
+
+                <div class="features">
+
+                    <div class="feature">
+                        <h3>Regla 20-20-20</h3>
+                        <p>
+                            Recibe recordatorios periódicos para apartar la vista
+                            de la pantalla y descansar los ojos.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Personalizable</h3>
+                        <p>
+                            Ajusta la duración del temporizador, los sonidos, la vibración
+                            y las notificaciones según tus preferencias.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Varios idiomas</h3>
+                        <p>
+                            Usa EyeHealth en el idioma que prefieras.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy">
+            <div class="container privacy">
+
+                <h2>Política de Privacidad</h2>
+
+                <p class="last-updated">
+                    <strong>Última actualización:</strong> 13 de agosto de 2026
+                </p>
+
+                <p>
+                    EyeHealth es desarrollado por Samuel Silva.
+                    Esta Política de Privacidad explica cómo EyeHealth gestiona
+                    la información cuando utilizas esta aplicación.
+                </p>
+
+                <h3>1. Información que recopilamos</h3>
+
+                <p>
+                    EyeHealth no recopila datos personales ni datos sensibles de los usuarios.
+                </p>
+
+                <p>
+                    La aplicación no requiere que los usuarios creen una cuenta ni
+                    proporcionen información personal como nombre, dirección de correo
+                    electrónico, número de teléfono, ubicación, contactos, fotos,
+                    grabaciones del micrófono u otra información de identificación personal.
+                </p>
+
+                <p>
+                    La versión actual de EyeHealth no utiliza SDK de análisis,
+                    publicidad, informes de fallos, seguimiento ni servicios en la nube,
+                    y no transmite datos de los usuarios a servidores operados por el desarrollador.
+                </p>
+
+                <h3>2. Información almacenada localmente</h3>
+
+                <p>
+                    EyeHealth almacena determinada información localmente en tu dispositivo
+                    para proporcionar sus funciones y recordar tus preferencias.
+                </p>
+
+                <ul>
+                    <li>Duración del tiempo de pantalla y de las pausas;</li>
+                    <li>Estado actual del temporizador y tiempo restante;</li>
+                    <li>Idioma seleccionado;</li>
+                    <li>Preferencias de sonido y sonido de notificación seleccionado;</li>
+                    <li>Preferencias de vibración;</li>
+                    <li>Preferencias de notificaciones;</li>
+                    <li>Preferencias de configuración inicial y de la pantalla de bienvenida.</li>
+                </ul>
+
+                <p>
+                    Esta información se utiliza únicamente para el funcionamiento
+                    y la configuración de la aplicación.
+                </p>
+
+                <p>
+                    EyeHealth no transmite al desarrollador esta información
+                    almacenada localmente.
+                </p>
+
+                <h3>3. Permisos de la aplicación</h3>
+
+                <p>
+                    EyeHealth puede solicitar o utilizar los siguientes permisos de Android.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Notificaciones:</strong>
+                        Se utilizan para mostrar notificaciones del temporizador y avisarte
+                        cuando ha finalizado un período de tiempo de pantalla o de pausa.
+                    </li>
+
+                    <li>
+                        <strong>Alarmas exactas:</strong>
+                        Se utilizan para garantizar que las fases del temporizador terminen
+                        en el momento correcto, incluso cuando el dispositivo está inactivo
+                        o la aplicación no está abierta activamente.
+                    </li>
+
+                    <li>
+                        <strong>Wake lock:</strong>
+                        Se utiliza brevemente durante los períodos cortos de pausa para
+                        mantener activo el procesamiento del temporizador mientras la
+                        pantalla está apagada.
+                    </li>
+
+                    <li>
+                        <strong>Vibración:</strong>
+                        Se utiliza para proporcionar alertas de vibración opcionales.
+                    </li>
+
+                    <li>
+                        <strong>Servicio en primer plano:</strong>
+                        Se utiliza para mantener un temporizador activo de EyeHealth
+                        en funcionamiento cuando la aplicación no está visible en la pantalla.
+                    </li>
+                </ul>
+
+                <p>
+                    Estos permisos se utilizan únicamente para proporcionar
+                    las funciones correspondientes de la aplicación.
+                </p>
+
+                <p>
+                    EyeHealth no solicita acceso a tu ubicación, cámara,
+                    micrófono, contactos, fotos ni otros contenidos personales.
+                </p>
+
+                <h3>4. Acceso a Internet</h3>
+
+                <p>
+                    La versión actual de EyeHealth no solicita el permiso de Internet
+                    de Android y no utiliza una conexión a Internet para transmitir
+                    datos de la aplicación o del usuario.
+                </p>
+
+                <p>
+                    Los sonidos y avisos de voz incluidos con EyeHealth se almacenan
+                    dentro de la aplicación y se reproducen localmente en el dispositivo.
+                    No se graba ningún audio del usuario ni se envía a un servicio externo.
+                </p>
+
+                <p>
+                    Los servicios de copia de seguridad o transferencia de dispositivos
+                    de Android pueden gestionar de forma independiente los datos de la
+                    aplicación almacenados localmente, tal como se describe en la sección siguiente.
+                </p>
+
+                <h3>5. Copia de seguridad de Android y transferencia de dispositivos</h3>
+
+                <p>
+                    EyeHealth almacena sus ajustes y la información del temporizador
+                    localmente en tu dispositivo.
+                </p>
+
+                <p>
+                    Dependiendo de tu dispositivo Android, cuenta y configuración de
+                    copia de seguridad, algunos datos de la aplicación almacenados
+                    localmente pueden incluirse en mecanismos de copia de seguridad
+                    o transferencia de dispositivos proporcionados por el sistema
+                    operativo Android o por el proveedor de copias de seguridad del usuario.
+                </p>
+
+                <p>
+                    Estos procesos de copia de seguridad y restauración son gestionados
+                    por el sistema operativo o por el proveedor de copias de seguridad
+                    y no son operados ni accedidos por el desarrollador de EyeHealth.
+                </p>
+
+                <h3>6. Compartición de información</h3>
+
+                <p>
+                    EyeHealth no vende, alquila ni comparte datos personales o sensibles
+                    de los usuarios con terceros.
+                </p>
+
+                <p>
+                    Debido a que la versión actual de EyeHealth no recopila datos personales
+                    o sensibles de los usuarios, el desarrollador no mantiene una base de
+                    datos con información de los usuarios.
+                </p>
+
+                <h3>7. Seguridad de los datos</h3>
+
+                <p>
+                    EyeHealth está diseñado para minimizar el tratamiento de datos,
+                    manteniendo la configuración de la aplicación y la información del
+                    temporizador localmente en el dispositivo del usuario.
+                </p>
+
+                <p>
+                    La versión actual no transmite datos personales o sensibles de los
+                    usuarios a servidores operados por el desarrollador.
+                </p>
+
+                <p>
+                    Los datos de la aplicación almacenados localmente están sujetos a
+                    los mecanismos de seguridad proporcionados por el sistema operativo
+                    Android y por el dispositivo del usuario.
+                </p>
+
+                <h3>8. Conservación y eliminación de datos</h3>
+
+                <p>
+                    EyeHealth conserva la configuración y la información del temporizador
+                    almacenadas localmente mientras permanezcan guardadas por la aplicación
+                    en el dispositivo del usuario.
+                </p>
+
+                <p>
+                    Los usuarios pueden eliminar los datos de EyeHealth almacenados localmente
+                    borrando el almacenamiento de la aplicación desde los ajustes de Android
+                    o desinstalando la aplicación.
+                </p>
+
+                <p>
+                    Los datos que puedan haber sido incluidos en una copia de seguridad
+                    de Android o vinculada a una cuenta están sujetos a los controles de
+                    conservación y eliminación del sistema operativo o proveedor de copias
+                    de seguridad correspondiente.
+                </p>
+
+                <p>
+                    EyeHealth no mantiene cuentas de usuario ni bases de datos de usuarios
+                    operadas por el desarrollador, por lo que no existen datos separados
+                    de cuentas o datos almacenados en servidores del desarrollador que deban eliminarse.
+                </p>
+
+                <h3>9. Servicios de terceros</h3>
+
+                <p>
+                    La versión actual de EyeHealth no integra servicios de terceros de
+                    publicidad, análisis, seguimiento de usuarios ni gestión de cuentas.
+                </p>
+
+                <p>
+                    La aplicación utiliza bibliotecas estándar de Android y AndroidX
+                    para proporcionar sus funciones.
+                </p>
+
+                <p>
+                    Los servicios a nivel del sistema, como las copias de seguridad de
+                    Android, los permisos de la aplicación y las notificaciones, son
+                    proporcionados y gestionados por el sistema operativo Android.
+                </p>
+
+                <h3>10. Cambios en esta Política de Privacidad</h3>
+
+                <p>
+                    Esta Política de Privacidad puede actualizarse si cambian las
+                    funciones de EyeHealth o sus prácticas de tratamiento de datos.
+                </p>
+
+                <p>
+                    Cualquier cambio se reflejará en esta página y la fecha de
+                    "Última actualización" se modificará según corresponda.
+                </p>
+
+                <p>
+                    Se recomienda a los usuarios revisar periódicamente esta
+                    Política de Privacidad.
+                </p>
+
+                <h3>11. Contacto</h3>
+
+                <p>
+                    Si tienes alguna pregunta sobre esta Política de Privacidad
+                    o sobre las prácticas de privacidad de EyeHealth, puedes
+                    contactar con el desarrollador en:
+                </p>
+
+                <p class="contact-email">
+                    <a href="mailto:samuel.silva.appz@gmail.com">
+                        samuel.silva.appz@gmail.com
+                    </a>
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+        <footer>
+            <div class="container">
+                <p>@ 2026 EyeHealth</p>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById("languageSelect").addEventListener("change", function () {
+                if (this.value === "en") {
+                    window.location.href = "../";
+                } 
+                else if (this.value === "pt-br") {
+                    window.location.href = "../pt-br/";
+                }
+                else if (this.value === "es") {
+                window.location.href = "../es/"
+              }
+                else if (this.value === "fr") {
+                window.location.href = "../fr/"
+              }
+              else if (this.value === "ja") {
+                window.location.href = "./"
+              }
+            });
+        </script>
+    </body>
+</html>
